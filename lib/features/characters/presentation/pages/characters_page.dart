@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:rick_and_morty_app/features/character_detail/presentation/pages/widgets/error_info.dart';
 import 'package:rick_and_morty_app/features/characters/presentation/pages/widgets/card_box.dart';
 import 'package:rick_and_morty_app/features/characters/presentation/pages/widgets/card_loading.dart';
 import 'package:rick_and_morty_app/features/characters/presentation/providers/characters_list.dart';
@@ -54,32 +55,20 @@ class CharacterPageState extends ConsumerState<CharactersPage> {
                 topRight: Radius.circular(16),
               ),
             ),
-            child: characters.when(
-              data:
-                  (list) => NotificationListener(
-                    onNotification: (notification) {
-                      if (notification is ScrollUpdateNotification) {
-                        heightAppBar = (200 - scrollController.offset).clamp(
-                          0,
-                          200,
-                        );
-                        topPosition = (160 - scrollController.offset).clamp(
-                          0,
-                          160,
-                        );
-                        setState(() {});
-                      }
-                      return true;
-                    },
-                    child: ClipRRect(
+            child: NotificationListener(
+              onNotification: (notification) {
+                if (notification is ScrollUpdateNotification) {
+                  heightAppBar = (200 - scrollController.offset).clamp(0, 200);
+                  topPosition = (160 - scrollController.offset).clamp(0, 160);
+                  setState(() {});
+                }
+                return true;
+              },
+              child: characters.when(
+                data:
+                    (list) => ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: MasonryGridView.builder(
-                        // gridDelegate:
-                        //     const SliverGridDelegateWithFixedCrossAxisCount(
-                        //       crossAxisCount: 2,
-                        //       crossAxisSpacing: 4,
-                        //       childAspectRatio: 0.66,
-                        //     ),
                         gridDelegate:
                             SliverSimpleGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2,
@@ -97,14 +86,20 @@ class CharacterPageState extends ConsumerState<CharactersPage> {
                             final character = list[index];
                             return CardBox(character: character);
                           }
-                          // FOOTER LOADER QUE OCUPA TODA LA FILA
                           return CardLoading();
                         },
                       ),
                     ),
-                  ),
-              loading: () => const Center(child: CircularProgressIndicator()),
-              error: (e, _) => Center(child: Text('Error: $e')),
+                error:
+                    (error, stackTrace) => Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ErrorInfo(color: Colors.grey.shade200),
+                        SizedBox(height: 100),
+                      ],
+                    ),
+                loading: () => const Center(child: CircularProgressIndicator()),
+              ),
             ),
           ),
         ],

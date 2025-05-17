@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:rick_and_morty_app/core/util.dart';
 
 class CustomShimmer extends StatefulWidget {
   final Widget child;
+  final Color? color;
 
-  const CustomShimmer({required this.child, super.key});
+  const CustomShimmer({required this.child, this.color, super.key});
 
   @override
   State<CustomShimmer> createState() => _CustomShimmerState();
@@ -30,6 +32,15 @@ class _CustomShimmerState extends State<CustomShimmer>
 
   @override
   Widget build(BuildContext context) {
+    final colorBorder =
+        widget.color != null && !Util.isDark(widget.color!)
+            ? Util.darken(widget.color!, 0.1)
+            : Colors.grey.shade300;
+    final colorCenter =
+        widget.color != null && !Util.isDark(widget.color!)
+            ? Util.darken(widget.color!, 0.2)
+            : Colors.grey.shade400;
+
     return AnimatedBuilder(
       animation: _controller,
       builder: (_, __) {
@@ -40,11 +51,11 @@ class _CustomShimmerState extends State<CustomShimmer>
 
             return LinearGradient(
               colors: [
-                Colors.grey.shade300,
-                Colors.grey.shade200,
-                Colors.grey.shade200, // brillo más suave
-                Colors.grey.shade200,
-                Colors.grey.shade300,
+                colorBorder,
+                colorCenter,
+                colorCenter,
+                colorCenter,
+                colorBorder,
               ],
               stops: const [0.0, 0.25, 0.5, 0.85, 1.0],
               begin: Alignment.centerLeft,
