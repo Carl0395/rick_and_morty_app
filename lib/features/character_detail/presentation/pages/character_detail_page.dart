@@ -55,12 +55,17 @@ class CharacterDetailPage extends ConsumerWidget {
                         Stack(
                           alignment: Alignment.center,
                           children: [
-                            Opacity(
-                              opacity: 0.1,
-                              child: Image.asset(
-                                'assets/pickle_rick.png',
-                                height: 200,
-                                width: double.infinity,
+                            Container(
+                              padding: EdgeInsets.only(
+                                left: MediaQuery.of(context).size.width * 0.5,
+                              ),
+                              child: Opacity(
+                                opacity: 0.2,
+                                child: Image.asset(
+                                  'assets/pickle_rick.png',
+                                  height: 200,
+                                  width: double.infinity,
+                                ),
                               ),
                             ),
                             Container(
