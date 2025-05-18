@@ -101,19 +101,19 @@ Sigue los siguientes pasos para clonar y ejecutar el proyecto en tu entorno loca
 
 ### Lista de personajes:
 
-<img src="screenshots/02-characters.png" alt="Products List" width="200"/>
+<img src="screenshots/02-characters.png" alt="Characters List" width="200"/>
 
 ### Detalle de un personaje:
 
-<img src="screenshots/03-character-detail.png" alt="Products List" width="200"/>
+<img src="screenshots/03-character-detail.png" alt="Character Detail" width="200"/>
 
 ### Vista de error en el detalle de un personaje:
 
-<img src="screenshots/04-character-detail-error.png" alt="Products List" width="200"/>
+<img src="screenshots/04-character-detail-error.png" alt="Character Detail Error" width="200"/>
 
 ### Vista de error en la lista de personajes:
 
-<img src="screenshots/05-characters-error.png" alt="Products List" width="200"/>
+<img src="screenshots/05-characters-error.png" alt="Characters List Error" width="200"/>
 
 
 # 🧪 Pruebas Unitarias en `rick_and_morty_app`
