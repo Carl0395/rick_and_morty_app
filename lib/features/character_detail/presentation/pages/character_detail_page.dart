@@ -81,8 +81,8 @@ class CharacterDetailPage extends ConsumerWidget {
                         error: (e, stack) {
                           final message =
                               e is SocketException || e is NetworkException
-                                  ? 'Rick está causando fallas en el sistema; le pediremos a Morty que restablezca la conexión'
-                                  : 'Rick desconectó algo del servidor... Morty intentará solucionarlo.';
+                                  ? 'Rick is causing system failures; we’ll ask Morty to restore the connection.'
+                                  : 'Rick unplugged something from the server... Morty will try to fix it.';
                           return ErrorInfo(
                             color: color,
                             message: message,

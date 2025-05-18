@@ -32,9 +32,13 @@ Aplicación desarrollada en Flutter que consume la API pública de Rick and Mort
 
 - **[Flutter](https://flutter.dev/)**: Framework de UI para desarrollar aplicaciones nativas multiplataforma.
 - **[Dart](https://dart.dev/)**: Lenguaje de programación utilizado por Flutter.
-- **[GraphQl](https://pub.dev/packages/graphql_flutter)**: Paquete de Flutter que permite hacer peticiones a la API de Rick And Morty
+- **[Riverpod](https://riverpod.dev/es/)**: Paquete de flutter utilizado para la gestión de estado.
+- **[Freezed](https://pub.dev/packages/freezed)**: Generador de código para las clases de datos.
+- **[GraphQL](https://pub.dev/packages/graphql_flutter)**: Paquete de Flutter que permite hacer peticiones a la API de Rick And Morty.
 
 ## 📁 Estructura del Proyecto
+
+El proyecto ha sido implementado siguiendo la arquitectura limpia y buenas practicas utilizando diferentes patrones de diseño como el patron Factory, Repository, Dependency Injection, entre otros, además de los principios SOLID.
 
 ```
 fakestore-ecommerce-app/
@@ -110,8 +114,6 @@ Sigue los siguientes pasos para clonar y ejecutar el proyecto en tu entorno loca
 ### Vista de error en la lista de personajes:
 
 <img src="screenshots/05-characters-error.png" alt="Products List" width="200"/>
-
-Permite crear una cuenta de usuario
 
 
 # 🧪 Pruebas Unitarias en `rick_and_morty_app`
