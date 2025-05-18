@@ -52,7 +52,7 @@ fakestore-ecommerce-app/
 │   ├── data/              # Fuente de datos
 │   ├── domain/            # Entidades
 │   └── presentation/      # Widgets
-└── main.dart                  # Punto de entrada de la app
+└── main.dart              # Punto de entrada de la app
 ```
 
 ## 🚀 Instalación y Ejecución
