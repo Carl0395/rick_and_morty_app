@@ -22,7 +22,8 @@ Aplicación desarrollada en Flutter que consume la API pública de Rick and Mort
 
 - **Listado de Personajes**: Muestra una lista de personajes obtenidos desde la [API de Rick and Morty](https://rickandmortyapi.com/).
 - **Detalles del Personaje**: Muestra mayor detalle de un personaje seleccionado indicando, genero, origen, estado, ubicación, etc.
-
+- **Paginación**: Para cargar mas personajes desplázate hasta el final de la lista
+- **Actualizar lista:** Puedes deslizar la lista hacia abajo y la lista actualizará los personajes, cargando los de la siguiente página
 ## 🛠️ Tecnologías Utilizadas
 
 - **[Flutter](https://flutter.dev/)**: Framework de UI para desarrollar aplicaciones nativas multiplataforma.

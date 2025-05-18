@@ -17,6 +17,13 @@ final GoRouter router = GoRouter(
         return CharacterDetailPage(character: character, color: color);
       },
     ),
+    GoRoute(
+      path: Routes.resident,
+      builder: (context, state) {
+        final (character, color) = state.extra as (Character, Color);
+        return CharacterDetailPage(character: character, color: color);
+      },
+    ),
   ],
 );
 
@@ -24,4 +31,5 @@ class Routes {
   Routes._();
   static final String charactersList = '/';
   static final String characterDetail = '/detail';
+  static final String resident = '/resident';
 }

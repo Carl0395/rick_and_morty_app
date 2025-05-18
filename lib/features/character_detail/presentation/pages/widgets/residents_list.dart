@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:rick_and_morty_app/core/router.dart';
+import 'package:rick_and_morty_app/core/util.dart';
 import 'package:rick_and_morty_app/shared/domain/entities/character.dart';
 import 'package:rick_and_morty_app/shared/presentation/widgets/avatar.dart';
 
@@ -25,17 +28,29 @@ class ResidentsList extends StatelessWidget {
         children:
             residents
                 .map(
-                  (c) => Container(
-                    margin: EdgeInsets.all(4),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(14),
-                      border: Border.all(color: darkenColor, width: 3),
-                    ),
-                    child: Avatar(
-                      image: c.image,
-                      height: 80,
-                      padding: EdgeInsets.zero,
-                      color: color,
+                  (c) => GestureDetector(
+                    onTap: () async {
+                      final colorResident =
+                          await Util.getDominantColorFromNetwork(c.image);
+                      if (context.mounted) {
+                        context.push(
+                          Routes.resident,
+                          extra: (c, colorResident),
+                        );
+                      }
+                    },
+                    child: Container(
+                      margin: EdgeInsets.all(4),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(color: darkenColor, width: 3),
+                      ),
+                      child: Avatar(
+                        image: c.image,
+                        height: 80,
+                        padding: EdgeInsets.zero,
+                        color: color,
+                      ),
                     ),
                   ),
                 )

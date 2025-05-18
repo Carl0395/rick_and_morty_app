@@ -24,7 +24,6 @@ class CharacterDetailPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final fullCharacter = ref.watch(characterDetailProvider(character.id));
-
     final darkenColor = Util.darken(color, 0.2);
     final titleColor =
         Util.isDark(color) ? Colors.white : Util.darken(color, 0.7);
@@ -76,9 +75,9 @@ class CharacterDetailPage extends ConsumerWidget {
                       ),
                       SizedBox(height: 10),
                       fullCharacter.when(
-                        data:
-                            (data) =>
-                                CharacterInfo(character: data, color: color),
+                        data: (data) {
+                          return CharacterInfo(character: data, color: color);
+                        },
                         error: (e, stack) {
                           final message =
                               e is SocketException || e is NetworkException
