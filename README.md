@@ -45,13 +45,13 @@ fakestore-ecommerce-app/
 │   │   ├── data/              # modelos, implementación de repositorio
 │   │   ├── domain/            # Casos de uso
 │   │   └── presentation/      # Widgets, páginas, controladores
-│   ├── character_detail/      # Detalle personaje
-│   │   ├── domain/
-│   │   └── presentation/
-│   └── shared/                # Componentes compartidos entre features
-│       ├── data/              # Fuente de datos
-│       ├── domain/            # Entidades
-│       └── presentation/      # Widgets
+│   └── character_detail/      # Detalle personaje
+│       ├── domain/
+│       └── presentation/
+├── shared/                # Componentes compartidos entre features
+│   ├── data/              # Fuente de datos
+│   ├── domain/            # Entidades
+│   └── presentation/      # Widgets
 └── main.dart                  # Punto de entrada de la app
 ```
 
@@ -131,6 +131,7 @@ Las pruebas se encuentran en el directorio `test/` y cubren los siguientes módu
 
 - **Framework de Pruebas**: [flutter_test](https://pub.dev/packages/flutter_test)
 - **Mocking**: [mocktail](https://pub.dev/packages/mocktail)
+- **Fixtures** Datos de prueba
 
 ## 🚀 Ejecución de Pruebas
 
