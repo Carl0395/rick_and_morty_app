@@ -131,7 +131,7 @@ Las pruebas se encuentran en el directorio `test/` y cubren los siguientes módu
 
 - **Framework de Pruebas**: [flutter_test](https://pub.dev/packages/flutter_test)
 - **Mocking**: [mocktail](https://pub.dev/packages/mocktail)
-- **Fixtures** Datos de prueba
+- **Fixtures:** Datos de prueba
 
 ## 🚀 Ejecución de Pruebas
 
