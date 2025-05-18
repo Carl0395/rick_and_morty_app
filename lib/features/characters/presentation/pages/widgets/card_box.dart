@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:rick_and_morty_app/core/router.dart';
 import 'package:rick_and_morty_app/core/util.dart';
-import 'package:rick_and_morty_app/features/character_detail/presentation/pages/character_detail_page.dart';
 import 'package:rick_and_morty_app/shared/domain/entities/character.dart';
 import 'package:rick_and_morty_app/shared/presentation/widgets/avatar.dart';
 import 'package:rick_and_morty_app/shared/presentation/widgets/status_dot.dart';
@@ -26,15 +26,9 @@ class CardBox extends StatelessWidget {
 
         return GestureDetector(
           onTap:
-              () => Navigator.push(
-                context,
-                CupertinoPageRoute(
-                  builder:
-                      (context) => CharacterDetailPage(
-                        character: character,
-                        color: color,
-                      ),
-                ),
+              () => context.push(
+                Routes.characterDetail,
+                extra: (character, color),
               ),
           child: AnimatedContainer(
             duration: Duration(milliseconds: 200),

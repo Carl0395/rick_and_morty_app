@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rick_and_morty_app/core/util.dart';
@@ -76,7 +78,20 @@ class CharacterDetailPage extends ConsumerWidget {
                         data:
                             (data) =>
                                 CharacterInfo(character: data, color: color),
-                        error: (e, stack) => ErrorInfo(color: color),
+                        error: (e, stack) {
+                          print('errororroro: $e, stack: $stack');
+                          final message =
+                              e is SocketException
+                                  ? 'Rick está causando fallas en el sistema; le pediremos a Morty que restablezca la conexión'
+                                  : 'Rick desconectó algo del servidor... Morty intentará solucionarlo.';
+                          return ErrorInfo(
+                            color: color,
+                            message: message,
+                            onRetry: () async {
+                              ref.invalidate(characterDetailProvider);
+                            },
+                          );
+                        },
                         loading: () => CharacterInfoShimmer(color: color),
                       ),
                       SizedBox(height: 100),

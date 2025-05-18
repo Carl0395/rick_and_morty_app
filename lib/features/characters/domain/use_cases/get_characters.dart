@@ -5,5 +5,6 @@ class GetCharacters {
   final CharactersRepository repository;
   GetCharacters(this.repository);
 
-  Future<List<Character>> call(int page) => repository.getCharacters(page);
+  Future<List<Character>> call(int page) async =>
+      await repository.getCharacters(page);
 }

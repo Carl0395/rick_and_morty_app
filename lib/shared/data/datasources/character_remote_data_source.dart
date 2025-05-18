@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:io';
+
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:rick_and_morty_app/features/characters/data/models/character_model.dart';
 
@@ -25,7 +28,7 @@ class CharacterRemoteDataSource {
     );
 
     if (result.hasException) {
-      throw Exception(result.exception.toString());
+      throw handleGraphQLException(result.exception!);
     }
 
     final results = result.data?["characters"]?["results"] as List<dynamic>;
@@ -72,10 +75,34 @@ class CharacterRemoteDataSource {
     );
 
     if (result.hasException) {
-      throw Exception(result.exception.toString());
+      // throw Exception(result.exception.toString());
+      throw handleGraphQLException(result.exception!);
     }
 
     final json = result.data?["character"];
     return CharacterModel.fromJson(json);
+  }
+
+  Exception handleGraphQLException(OperationException? exception) {
+    print('::::::::::::: $exception ${exception?.linkException.runtimeType}');
+    if (exception == null) {
+      return Exception('Unknown GraphQL error.');
+    }
+
+    final linkException = exception.linkException;
+    final graphqlErrors = exception.graphqlErrors;
+
+    if (linkException is ServerException) {
+      return ServerException(originalException: exception);
+    }
+    if (linkException is NetworkException || linkException is SocketException) {
+      return NetworkException(originalException: exception, uri: Uri());
+    }
+
+    if (graphqlErrors.isNotEmpty) {
+      return Exception(graphqlErrors.map((e) => e.message).join('\n'));
+    }
+
+    return Exception('Error desconocido.');
   }
 }

@@ -11,8 +11,8 @@ class CharactersList extends _$CharactersList {
   bool _isLoading = false;
 
   @override
-  Future<List<Character>> build() {
-    return _getCharacters();
+  Future<List<Character>> build() async {
+    return await _getCharacters();
   }
 
   Future<List<Character>> _getCharacters() async {
@@ -38,4 +38,16 @@ class CharactersList extends _$CharactersList {
       _isLoading = false;
     }
   }
+
+  Future<void> reload() async {
+    try {
+      _page = 1;
+      final data = await _getCharacters();
+      state = AsyncValue.data(data);
+    } catch (e, st) {
+      state = AsyncValue.error(e, st);
+    }
+  }
+
+  bool get hasMore => _hasMore;
 }

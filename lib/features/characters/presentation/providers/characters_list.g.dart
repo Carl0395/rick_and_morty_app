@@ -6,7 +6,7 @@ part of 'characters_list.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$charactersListHash() => r'4bffd827c7fb17ec3a4d5aac4d2d7a6c61c79e14';
+String _$charactersListHash() => r'25e4b72391f5993a15f5fef779595976993e4015';
 
 /// See also [CharactersList].
 @ProviderFor(CharactersList)

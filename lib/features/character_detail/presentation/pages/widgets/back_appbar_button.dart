@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BackAppBarButton extends StatelessWidget {
   const BackAppBarButton({super.key, required this.darkenColor});
@@ -8,7 +9,7 @@ class BackAppBarButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.pop(context),
+      onTap: () => context.pop(),
       child: Container(
         width: 24,
         height: 24,

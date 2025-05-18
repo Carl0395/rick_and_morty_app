@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -18,8 +20,6 @@ class CharacterPageState extends ConsumerState<CharactersPage> {
   final scrollController = ScrollController();
   double heightAppBar = 200;
   double topPosition = 160;
-  bool hasMoreItems = true;
-  int currentPage = 1;
 
   @override
   void initState() {
@@ -65,8 +65,14 @@ class CharacterPageState extends ConsumerState<CharactersPage> {
                 return true;
               },
               child: characters.when(
-                data:
-                    (list) => ClipRRect(
+                data: (list) {
+                  final hasMore =
+                      ref.read(charactersListProvider.notifier).hasMore;
+                  return RefreshIndicator(
+                    onRefresh: () async {
+                      ref.invalidate(charactersListProvider);
+                    },
+                    child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: MasonryGridView.builder(
                         gridDelegate:
@@ -80,7 +86,7 @@ class CharacterPageState extends ConsumerState<CharactersPage> {
                           top: 4,
                           bottom: 50,
                         ),
-                        itemCount: list.length + (hasMoreItems ? 2 : 0),
+                        itemCount: list.length + (hasMore ? 2 : 0),
                         itemBuilder: (context, index) {
                           if (index < list.length) {
                             final character = list[index];
@@ -90,14 +96,31 @@ class CharacterPageState extends ConsumerState<CharactersPage> {
                         },
                       ),
                     ),
-                error:
-                    (error, stackTrace) => Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ErrorInfo(color: Colors.grey.shade200),
-                        SizedBox(height: 100),
-                      ],
-                    ),
+                  );
+                },
+                error: (error, stackTrace) {
+                  print('error: $error ${error.runtimeType}');
+                  print('=================');
+                  final message =
+                      error is SocketException
+                          ? 'Rick está causando fallas en el sistema; le pediremos a Morty que restablezca la conexión'
+                          : 'Rick desconectó algo del servidor... Morty intentará solucionarlo.';
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ErrorInfo(
+                        color: Colors.grey.shade200,
+                        message: message,
+                        onRetry: () async {
+                          await ref
+                              .read(charactersListProvider.notifier)
+                              .reload();
+                        },
+                      ),
+                      SizedBox(height: 100),
+                    ],
+                  );
+                },
                 loading: () => const Center(child: CircularProgressIndicator()),
               ),
             ),
@@ -108,12 +131,13 @@ class CharacterPageState extends ConsumerState<CharactersPage> {
   }
 
   initScrollListener() {
+    final hasMore = ref.read(charactersListProvider.notifier).hasMore;
     scrollController.addListener(() {
       if (scrollController.position.pixels >=
           scrollController.position.maxScrollExtent - 200) {
         // Si estás cerca del final (a 200px)
-        if (hasMoreItems) {
-          loadMoreItems(); // Tu función para cargar más datos
+        if (hasMore) {
+          loadMoreItems();
         }
       }
     });

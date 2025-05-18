@@ -42,7 +42,6 @@ class Avatar extends StatelessWidget {
                 tag: heroTag ?? image,
                 child: Image.network(
                   image,
-                  // width: double.infinity,
                   fit: BoxFit.cover,
                   errorBuilder: (context, error, stackTrace) => SizedBox(),
                 ),
