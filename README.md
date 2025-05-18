@@ -48,11 +48,11 @@ fakestore-ecommerce-app/
 │   └── character_detail/      # Detalle personaje
 │       ├── domain/
 │       └── presentation/
-├── shared/                # Componentes compartidos entre features
-│   ├── data/              # Fuente de datos
-│   ├── domain/            # Entidades
-│   └── presentation/      # Widgets
-└── main.dart              # Punto de entrada de la app
+├── shared/                    # Componentes compartidos entre features
+│   ├── data/                  # Fuente de datos
+│   ├── domain/                # Entidades
+│   └── presentation/          # Widgets
+└── main.dart                  # Punto de entrada de la app
 ```
 
 ## 🚀 Instalación y Ejecución
