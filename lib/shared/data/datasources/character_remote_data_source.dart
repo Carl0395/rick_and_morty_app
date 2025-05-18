@@ -75,7 +75,6 @@ class CharacterRemoteDataSource {
     );
 
     if (result.hasException) {
-      // throw Exception(result.exception.toString());
       throw handleGraphQLException(result.exception!);
     }
 
@@ -84,7 +83,6 @@ class CharacterRemoteDataSource {
   }
 
   Exception handleGraphQLException(OperationException? exception) {
-    print('::::::::::::: $exception ${exception?.linkException.runtimeType}');
     if (exception == null) {
       return Exception('Unknown GraphQL error.');
     }

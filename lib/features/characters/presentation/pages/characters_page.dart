@@ -99,8 +99,6 @@ class CharacterPageState extends ConsumerState<CharactersPage> {
                   );
                 },
                 error: (error, stackTrace) {
-                  print('error: $error ${error.runtimeType}');
-                  print('=================');
                   final message =
                       error is SocketException
                           ? 'Rick está causando fallas en el sistema; le pediremos a Morty que restablezca la conexión'

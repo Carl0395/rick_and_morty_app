@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rick_and_morty_app/core/router.dart';
-import 'package:rick_and_morty_app/features/characters/presentation/pages/characters_page.dart';
 
-void main() {
+void main() async {
   runApp(ProviderScope(child: const MyApp()));
 }
 

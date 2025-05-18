@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:rick_and_morty_app/core/util.dart';
 import 'package:rick_and_morty_app/features/character_detail/presentation/pages/widgets/back_appbar_button.dart';
 import 'package:rick_and_morty_app/features/character_detail/presentation/pages/widgets/character_image.dart';
@@ -79,9 +80,8 @@ class CharacterDetailPage extends ConsumerWidget {
                             (data) =>
                                 CharacterInfo(character: data, color: color),
                         error: (e, stack) {
-                          print('errororroro: $e, stack: $stack');
                           final message =
-                              e is SocketException
+                              e is SocketException || e is NetworkException
                                   ? 'Rick está causando fallas en el sistema; le pediremos a Morty que restablezca la conexión'
                                   : 'Rick desconectó algo del servidor... Morty intentará solucionarlo.';
                           return ErrorInfo(
