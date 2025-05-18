@@ -16,6 +16,10 @@ Aplicación desarrollada en Flutter que consume la API pública de Rick and Mort
     - [Detalle de un personaje:](#detalle-de-un-personaje)
     - [Vista de error en el detalle de un personaje:](#vista-de-error-en-el-detalle-de-un-personaje)
     - [Vista de error en la lista de personajes:](#vista-de-error-en-la-lista-de-personajes)
+- [🧪 Pruebas Unitarias en `rick_and_morty_app`](#-pruebas-unitarias-en-rick_and_morty_app)
+  - [📁 Estructura de Pruebas](#-estructura-de-pruebas)
+  - [🧰 Herramientas Utilizadas](#-herramientas-utilizadas)
+  - [🚀 Ejecución de Pruebas](#-ejecución-de-pruebas)
   - [📄 Licencia](#-licencia)
 
 ## ✨ Características
@@ -108,6 +112,33 @@ Sigue los siguientes pasos para clonar y ejecutar el proyecto en tu entorno loca
 <img src="screenshots/05-characters-error.png" alt="Products List" width="200"/>
 
 Permite crear una cuenta de usuario
+
+
+# 🧪 Pruebas Unitarias en `rick_and_morty_app`
+
+Esta app incluye una suite de pruebas unitarias para garantizar la fiabilidad y robustez de las funcionalidades principales. A continuación, se detallan las pruebas implementadas y cómo ejecutarlas.
+
+## 📁 Estructura de Pruebas
+
+Las pruebas se encuentran en el directorio `test/` y cubren los siguientes módulos:
+
+- **`character_remote_data_source_test.dart`**: Pruebas para la clase `CharacterRemoteDataSource`, incluyendo:
+  - `getCharacters(int page)`: Verifica la obtención de la lista de personajes.
+  - `getCharacter(String id)`: Verifica la obtención de un personaje específico por ID.
+  - `handleGraphQLException()`: Verifica la validación de errores.
+
+## 🧰 Herramientas Utilizadas
+
+- **Framework de Pruebas**: [flutter_test](https://pub.dev/packages/flutter_test)
+- **Mocking**: [mocktail](https://pub.dev/packages/mocktail)
+
+## 🚀 Ejecución de Pruebas
+
+Para ejecutar todas las pruebas unitarias, utiliza el siguiente comando en la raíz del proyecto:
+
+```bash
+flutter test
+```
 
 ## 📄 Licencia
 

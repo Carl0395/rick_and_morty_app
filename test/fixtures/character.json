@@ -1,0 +1,665 @@
+{
+  "data": {
+    "character": {
+      "id": "1",
+      "name": "Rick Sanchez",
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      "status": "Alive",
+      "species": "Human",
+      "type": "",
+      "gender": "Male",
+      "origin": {
+        "name": "Earth (C-137)",
+        "type": "Planet",
+        "dimension": "Dimension C-137",
+        "residents": [
+          {
+            "id": "38",
+            "name": "Beth Smith",
+            "image": "https://rickandmortyapi.com/api/character/avatar/38.jpeg"
+          },
+          {
+            "id": "45",
+            "name": "Bill",
+            "image": "https://rickandmortyapi.com/api/character/avatar/45.jpeg"
+          },
+          {
+            "id": "71",
+            "name": "Conroy",
+            "image": "https://rickandmortyapi.com/api/character/avatar/71.jpeg"
+          },
+          {
+            "id": "82",
+            "name": "Cronenberg Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/82.jpeg"
+          },
+          {
+            "id": "83",
+            "name": "Cronenberg Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/83.jpeg"
+          },
+          {
+            "id": "92",
+            "name": "Davin",
+            "image": "https://rickandmortyapi.com/api/character/avatar/92.jpeg"
+          },
+          {
+            "id": "112",
+            "name": "Eric McMan",
+            "image": "https://rickandmortyapi.com/api/character/avatar/112.jpeg"
+          },
+          {
+            "id": "114",
+            "name": "Ethan",
+            "image": "https://rickandmortyapi.com/api/character/avatar/114.jpeg"
+          },
+          {
+            "id": "116",
+            "name": "Evil Beth Clone",
+            "image": "https://rickandmortyapi.com/api/character/avatar/116.jpeg"
+          },
+          {
+            "id": "117",
+            "name": "Evil Jerry Clone",
+            "image": "https://rickandmortyapi.com/api/character/avatar/117.jpeg"
+          },
+          {
+            "id": "120",
+            "name": "Evil Summer Clone",
+            "image": "https://rickandmortyapi.com/api/character/avatar/120.jpeg"
+          },
+          {
+            "id": "127",
+            "name": "Frank Palicky",
+            "image": "https://rickandmortyapi.com/api/character/avatar/127.jpeg"
+          },
+          {
+            "id": "155",
+            "name": "Harold",
+            "image": "https://rickandmortyapi.com/api/character/avatar/155.jpeg"
+          },
+          {
+            "id": "169",
+            "name": "Jacob",
+            "image": "https://rickandmortyapi.com/api/character/avatar/169.jpeg"
+          },
+          {
+            "id": "175",
+            "name": "Jerry Smith",
+            "image": "https://rickandmortyapi.com/api/character/avatar/175.jpeg"
+          },
+          {
+            "id": "179",
+            "name": "Jessica",
+            "image": "https://rickandmortyapi.com/api/character/avatar/179.jpeg"
+          },
+          {
+            "id": "186",
+            "name": "Joyce Smith",
+            "image": "https://rickandmortyapi.com/api/character/avatar/186.jpeg"
+          },
+          {
+            "id": "201",
+            "name": "Leonard Smith",
+            "image": "https://rickandmortyapi.com/api/character/avatar/201.jpeg"
+          },
+          {
+            "id": "216",
+            "name": "MC Haps",
+            "image": "https://rickandmortyapi.com/api/character/avatar/216.jpeg"
+          },
+          {
+            "id": "239",
+            "name": "Mr. Goldenfold",
+            "image": "https://rickandmortyapi.com/api/character/avatar/239.jpeg"
+          },
+          {
+            "id": "271",
+            "name": "Principal Vagina",
+            "image": "https://rickandmortyapi.com/api/character/avatar/271.jpeg"
+          },
+          {
+            "id": "302",
+            "name": "Ruben",
+            "image": "https://rickandmortyapi.com/api/character/avatar/302.jpeg"
+          },
+          {
+            "id": "303",
+            "name": "Samantha",
+            "image": "https://rickandmortyapi.com/api/character/avatar/303.jpeg"
+          },
+          {
+            "id": "338",
+            "name": "Summer Smith",
+            "image": "https://rickandmortyapi.com/api/character/avatar/338.jpeg"
+          },
+          {
+            "id": "343",
+            "name": "Tammy Guetermann",
+            "image": "https://rickandmortyapi.com/api/character/avatar/343.jpeg"
+          },
+          {
+            "id": "356",
+            "name": "Tom Randolph",
+            "image": "https://rickandmortyapi.com/api/character/avatar/356.jpeg"
+          },
+          {
+            "id": "394",
+            "name": "Davin",
+            "image": "https://rickandmortyapi.com/api/character/avatar/394.jpeg"
+          }
+        ]
+      },
+      "location": {
+        "name": "Citadel of Ricks",
+        "residents": [
+          {
+            "id": "1",
+            "name": "Rick Sanchez",
+            "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+          },
+          {
+            "id": "2",
+            "name": "Morty Smith",
+            "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+          },
+          {
+            "id": "8",
+            "name": "Adjudicator Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/8.jpeg"
+          },
+          {
+            "id": "14",
+            "name": "Alien Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/14.jpeg"
+          },
+          {
+            "id": "15",
+            "name": "Alien Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/15.jpeg"
+          },
+          {
+            "id": "18",
+            "name": "Antenna Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/18.jpeg"
+          },
+          {
+            "id": "21",
+            "name": "Aqua Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/21.jpeg"
+          },
+          {
+            "id": "22",
+            "name": "Aqua Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/22.jpeg"
+          },
+          {
+            "id": "27",
+            "name": "Artist Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/27.jpeg"
+          },
+          {
+            "id": "42",
+            "name": "Big Head Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/42.jpeg"
+          },
+          {
+            "id": "43",
+            "name": "Big Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/43.jpeg"
+          },
+          {
+            "id": "44",
+            "name": "Body Guard Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/44.jpeg"
+          },
+          {
+            "id": "48",
+            "name": "Black Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/48.jpeg"
+          },
+          {
+            "id": "53",
+            "name": "Blue Shirt Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/53.jpeg"
+          },
+          {
+            "id": "56",
+            "name": "Bootleg Portal Chemist Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/56.jpeg"
+          },
+          {
+            "id": "61",
+            "name": "Campaign Manager Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/61.jpeg"
+          },
+          {
+            "id": "69",
+            "name": "Commander Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/69.jpeg"
+          },
+          {
+            "id": "72",
+            "name": "Cool Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/72.jpeg"
+          },
+          {
+            "id": "73",
+            "name": "Cop Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/73.jpeg"
+          },
+          {
+            "id": "74",
+            "name": "Cop Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/74.jpeg"
+          },
+          {
+            "id": "77",
+            "name": "Cowboy Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/77.jpeg"
+          },
+          {
+            "id": "78",
+            "name": "Cowboy Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/78.jpeg"
+          },
+          {
+            "id": "85",
+            "name": "Cyclops Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/85.jpeg"
+          },
+          {
+            "id": "86",
+            "name": "Cyclops Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/86.jpeg"
+          },
+          {
+            "id": "95",
+            "name": "Dipper and Mabel Mortys",
+            "image": "https://rickandmortyapi.com/api/character/avatar/95.jpeg"
+          },
+          {
+            "id": "118",
+            "name": "Evil Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/118.jpeg"
+          },
+          {
+            "id": "119",
+            "name": "Evil Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/119.jpeg"
+          },
+          {
+            "id": "123",
+            "name": "Fat Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/123.jpeg"
+          },
+          {
+            "id": "135",
+            "name": "Garment District Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/135.jpeg"
+          },
+          {
+            "id": "143",
+            "name": "Glasses Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/143.jpeg"
+          },
+          {
+            "id": "152",
+            "name": "Hammerhead Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/152.jpeg"
+          },
+          {
+            "id": "164",
+            "name": "Insurance Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/164.jpeg"
+          },
+          {
+            "id": "165",
+            "name": "Investigator Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/165.jpeg"
+          },
+          {
+            "id": "187",
+            "name": "Juggling Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/187.jpeg"
+          },
+          {
+            "id": "200",
+            "name": "Lawyer Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/200.jpeg"
+          },
+          {
+            "id": "206",
+            "name": "Lizard Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/206.jpeg"
+          },
+          {
+            "id": "209",
+            "name": "Long Sleeved Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/209.jpeg"
+          },
+          {
+            "id": "220",
+            "name": "Mega Fruit Farmer Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/220.jpeg"
+          },
+          {
+            "id": "229",
+            "name": "Morty Mart Manager Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/229.jpeg"
+          },
+          {
+            "id": "231",
+            "name": "Morty Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/231.jpeg"
+          },
+          {
+            "id": "235",
+            "name": "Mortytown Loco",
+            "image": "https://rickandmortyapi.com/api/character/avatar/235.jpeg"
+          },
+          {
+            "id": "267",
+            "name": "Plumber Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/267.jpeg"
+          },
+          {
+            "id": "278",
+            "name": "Regional Manager Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/278.jpeg"
+          },
+          {
+            "id": "281",
+            "name": "Reverse Rick Outrage",
+            "image": "https://rickandmortyapi.com/api/character/avatar/281.jpeg"
+          },
+          {
+            "id": "283",
+            "name": "Rick D. Sanchez III",
+            "image": "https://rickandmortyapi.com/api/character/avatar/283.jpeg"
+          },
+          {
+            "id": "284",
+            "name": "Rick Guilt Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/284.jpeg"
+          },
+          {
+            "id": "285",
+            "name": "Rick Prime",
+            "image": "https://rickandmortyapi.com/api/character/avatar/285.jpeg"
+          },
+          {
+            "id": "286",
+            "name": "Rick D-99",
+            "image": "https://rickandmortyapi.com/api/character/avatar/286.jpeg"
+          },
+          {
+            "id": "287",
+            "name": "Rick D716",
+            "image": "https://rickandmortyapi.com/api/character/avatar/287.jpeg"
+          },
+          {
+            "id": "288",
+            "name": "Rick D716-B",
+            "image": "https://rickandmortyapi.com/api/character/avatar/288.jpeg"
+          },
+          {
+            "id": "289",
+            "name": "Rick D716-C",
+            "image": "https://rickandmortyapi.com/api/character/avatar/289.jpeg"
+          },
+          {
+            "id": "291",
+            "name": "Rick J-22",
+            "image": "https://rickandmortyapi.com/api/character/avatar/291.jpeg"
+          },
+          {
+            "id": "295",
+            "name": "Riq IV",
+            "image": "https://rickandmortyapi.com/api/character/avatar/295.jpeg"
+          },
+          {
+            "id": "298",
+            "name": "Robot Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/298.jpeg"
+          },
+          {
+            "id": "299",
+            "name": "Robot Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/299.jpeg"
+          },
+          {
+            "id": "322",
+            "name": "Simple Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/322.jpeg"
+          },
+          {
+            "id": "325",
+            "name": "Slick Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/325.jpeg"
+          },
+          {
+            "id": "328",
+            "name": "Slow Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/328.jpeg"
+          },
+          {
+            "id": "330",
+            "name": "Solicitor Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/330.jpeg"
+          },
+          {
+            "id": "345",
+            "name": "Teacher Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/345.jpeg"
+          },
+          {
+            "id": "359",
+            "name": "Tortured Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/359.jpeg"
+          },
+          {
+            "id": "366",
+            "name": "Trunk Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/366.jpeg"
+          },
+          {
+            "id": "378",
+            "name": "Wall Crawling Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/378.jpeg"
+          },
+          {
+            "id": "385",
+            "name": "Yellow Shirt Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/385.jpeg"
+          },
+          {
+            "id": "392",
+            "name": "Bearded Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/392.jpeg"
+          },
+          {
+            "id": "461",
+            "name": "Communication's Responsible Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/461.jpeg"
+          },
+          {
+            "id": "462",
+            "name": "Teleportation's Responsible Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/462.jpeg"
+          },
+          {
+            "id": "463",
+            "name": "SEAL Team Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/463.jpeg"
+          },
+          {
+            "id": "464",
+            "name": "SEAL Team Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/464.jpeg"
+          },
+          {
+            "id": "465",
+            "name": "SEAL Team Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/465.jpeg"
+          },
+          {
+            "id": "466",
+            "name": "SEAL Team Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/466.jpeg"
+          },
+          {
+            "id": "472",
+            "name": "Baby Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/472.jpeg"
+          },
+          {
+            "id": "473",
+            "name": "Bartender Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/473.jpeg"
+          },
+          {
+            "id": "474",
+            "name": "Dancer Cowboy Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/474.jpeg"
+          },
+          {
+            "id": "475",
+            "name": "Dancer Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/475.jpeg"
+          },
+          {
+            "id": "476",
+            "name": "Flower Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/476.jpeg"
+          },
+          {
+            "id": "477",
+            "name": "Hairdresser Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/477.jpeg"
+          },
+          {
+            "id": "478",
+            "name": "Journalist Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/478.jpeg"
+          },
+          {
+            "id": "479",
+            "name": "Private Sector Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/479.jpeg"
+          },
+          {
+            "id": "480",
+            "name": "Purple Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/480.jpeg"
+          },
+          {
+            "id": "481",
+            "name": "Retired General Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/481.jpeg"
+          },
+          {
+            "id": "482",
+            "name": "Secret Service Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/482.jpeg"
+          },
+          {
+            "id": "483",
+            "name": "Steve Jobs Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/483.jpeg"
+          },
+          {
+            "id": "484",
+            "name": "Sheik Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/484.jpeg"
+          },
+          {
+            "id": "485",
+            "name": "Modern Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/485.jpeg"
+          },
+          {
+            "id": "486",
+            "name": "Tan Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/486.jpeg"
+          },
+          {
+            "id": "487",
+            "name": "Visor Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/487.jpeg"
+          },
+          {
+            "id": "488",
+            "name": "Colonial Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/488.jpeg"
+          },
+          {
+            "id": "489",
+            "name": "P-Coat Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/489.jpeg"
+          },
+          {
+            "id": "801",
+            "name": "7+7 Years Old Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/801.jpeg"
+          },
+          {
+            "id": "802",
+            "name": "26 Years Old Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/802.jpeg"
+          },
+          {
+            "id": "803",
+            "name": "40 Years Old Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/803.jpeg"
+          },
+          {
+            "id": "804",
+            "name": "Andy",
+            "image": "https://rickandmortyapi.com/api/character/avatar/804.jpeg"
+          },
+          {
+            "id": "805",
+            "name": "Baby Mouse Skin Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/805.jpeg"
+          },
+          {
+            "id": "806",
+            "name": "Metaphor for Capitalism",
+            "image": "https://rickandmortyapi.com/api/character/avatar/806.jpeg"
+          },
+          {
+            "id": "810",
+            "name": "Stan Lee Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/810.jpeg"
+          },
+          {
+            "id": "811",
+            "name": "Re-Build-a-Morty Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/811.jpeg"
+          },
+          {
+            "id": "812",
+            "name": "Deformed Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/812.jpeg"
+          },
+          {
+            "id": "818",
+            "name": "Long Hair Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/818.jpeg"
+          },
+          {
+            "id": "819",
+            "name": "Redhead Rick",
+            "image": "https://rickandmortyapi.com/api/character/avatar/819.jpeg"
+          },
+          {
+            "id": "820",
+            "name": "Redhead Morty",
+            "image": "https://rickandmortyapi.com/api/character/avatar/820.jpeg"
+          }
+        ]
+      }
+    }
+  }
+}
