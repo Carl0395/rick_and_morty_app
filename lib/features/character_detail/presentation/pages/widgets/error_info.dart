@@ -64,7 +64,7 @@ class _ErrorInfoState extends State<ErrorInfo> {
                             ),
                           )
                           : Text(
-                            'Reintentar',
+                            'Retry',
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
